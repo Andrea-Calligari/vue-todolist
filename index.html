@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Vue-TodoList</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <header class="header-page">
+                <h1 class="logo">ToDoList</h1>
+            </header>
+        <main class="main-page">
+            <ul class="list">
+                <li  v-for="task in toDoList " :class="task.done === true ? 'line-through':' ' "class="item">{{task.text}}
+                    <button class="btn">&cross;</button>
+                </li>
+                
+            </ul>
+        </main>
+        </div>
+
+
+
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
