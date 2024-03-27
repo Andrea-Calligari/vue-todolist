@@ -16,8 +16,8 @@
             </header>
         <main class="main-page">
             <ul class="list">
-                <li  v-for="task in toDoList " :class="task.done === true ? 'line-through':' ' "class="item">{{task.text}}
-                    <button class="btn">&cross;</button>
+                <li  v-for="(task,i) in toDoList " :class="task.done === true ? 'line-through':' ' "class="item">{{task.text}}
+                    <button @click="removeTask(i)" class="btn">&cross;</button>
                 </li>
                 
             </ul>

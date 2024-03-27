@@ -29,7 +29,12 @@ createApp({
             done: true
         },
     ]
-   
+    
 }
+},
+methods:{
+    removeTask(i){
+       this.toDoList.splice(i, 1);
+    }
 }
 }).mount('#app')
